@@ -22,16 +22,22 @@ public class Character {
     }
 
     public Character(String fName, String lName) {
+        this(0,"",new Location("NA"), new Time(Time.Month.JAN, 1, 2000),"NA",fName,null,lName,"",null,new Species());
+    }
+
+    private Character(int age, String backstory, Location birthPlace, Time birthday, String career, String fName,
+                Character father, String lName, String mName, Character mother, Species species) {
+        this.age = age;
+        this.backstory = backstory;
+        this.birthPlace = birthPlace;
+        this.birthday = birthday;
+        this.career = career;
         this.fName = fName;
+        this.father = father;
         this.lName = lName;
-        this.age = 0;
-        this.birthPlace = new Location("NA");
-        this.career = "NA";
-        this.father = null;
-        this.mother = null;
-        this.species = new Species();
-        this.birthday = new Time();
-        this.backstory = "Insert tragic backstory here.";
+        this.mName = mName;
+        this.mother = mother;
+        this.species = species;
     }
 
     public void addRelation(Character characterA, Character characterB, Relation.RelationType relationType) {
