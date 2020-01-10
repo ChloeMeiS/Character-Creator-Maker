@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     private BorderPane root;
+    private World world;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -36,6 +37,8 @@ public class Main extends Application {
         MenuItem newSpeciesItem = new MenuItem("Species");
         MenuItem newLocItem = new MenuItem("Location");
 
+        setupFileMenuItems(newWorldItem, newCharacterItem, newSpeciesItem, newLocItem);
+
         newObject.getItems().addAll(newWorldItem, newCharacterItem, newSpeciesItem, newLocItem);
 
         fileMenu.getItems().addAll(newObject, openObject, new SeparatorMenuItem(), exitMenu);
@@ -55,6 +58,29 @@ public class Main extends Application {
         menuBar.getMenus().addAll(fileMenu, editMenu, viewMenu, creditsMenu);
 
         root.setTop(menuBar);
+    }
+
+    private void setupFileMenuItems(MenuItem newWorldItem, MenuItem newCharacterItem, MenuItem newSpeciesItem, MenuItem newLocItem) {
+        newWorldItem.setOnAction(actionEvent -> createNewWorld());
+        newCharacterItem.setOnAction(actionEvent -> createNewCharacter());
+        newSpeciesItem.setOnAction(actionEvent -> createNewSpecies());
+        newLocItem.setOnAction(actionEvent -> createNewLocation());
+    }
+
+    private void createNewLocation() {
+        System.out.println("Main.createNewLocation");
+    }
+
+    private void createNewSpecies() {
+        System.out.println("Main.createNewSpecies");
+    }
+
+    private void createNewCharacter() {
+        System.out.println("Main.createNewCharacter");
+    }
+
+    private void createNewWorld() {
+        System.out.println("Main.createNewWorld");
     }
 
     public static void main(String[] args) {
