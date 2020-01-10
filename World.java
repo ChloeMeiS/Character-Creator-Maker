@@ -1,6 +1,9 @@
 package sample;
 
+import java.util.ArrayList;
+
 public class World {
-    public void start() {
-    }
+    ArrayList<Character> characters;
+    ArrayList<Location> locations;
+    ArrayList<Species> species;
 }

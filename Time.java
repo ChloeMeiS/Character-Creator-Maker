@@ -1,3 +1,5 @@
+package sample;
+
 public class Time {
     private int day;
     private int maxDay;

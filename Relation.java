@@ -1,3 +1,5 @@
+package sample;
+
 public class Relation {
     private Character characterA;
     private Character characterB;

@@ -10,7 +10,6 @@ import javafx.stage.Stage;
 public class Main extends Application {
     private BorderPane root;
 
-
     @Override
     public void start(Stage primaryStage) throws Exception {
         root = new BorderPane();
@@ -32,7 +31,6 @@ public class Main extends Application {
 
         root.setTop(menuBar);
     }
-
 
     public static void main(String[] args) {
         launch(args);

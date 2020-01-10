@@ -1,3 +1,5 @@
+package sample;
+
 public class Species {
     private int avgAge;
     private boolean hasPowers;
