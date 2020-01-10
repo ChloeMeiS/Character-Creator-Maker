@@ -86,7 +86,7 @@ public class Main extends Application {
         ChoiceBox<String> measurementType = new ChoiceBox<>();
         measurementType.getItems().addAll("Metric", "Imperial");
 
-        CheckBox isCountryCheck = new CheckBox("Is this location a livable place?");
+        CheckBox isCountryCheck = new CheckBox("Is this location a Country/City?");
 
         Button locationSubmit = new Button("Add New Location");
         locationSubmit.setDisable(true);
@@ -124,13 +124,11 @@ public class Main extends Application {
         locationRoot.setAlignment(Pos.CENTER);
         locationRoot.setPadding(new Insets(20));
 
-
         Scene locationScene = new Scene(locationRoot, 500, 500);
         Stage newStage = new Stage();
         newStage.setScene(locationScene);
 
         newStage.show();
-
     }
 
     private void createNewSpecies() {
