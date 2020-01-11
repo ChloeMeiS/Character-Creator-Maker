@@ -10,6 +10,7 @@ public class Character {
     private String career;
     private String fName;
     private Character father;
+    private String gender;
     private String lName;
     private String mName;
     private Character mother;
@@ -94,6 +95,14 @@ public class Character {
 
     public void setFather(Character father) {
         this.father = father;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public Character getMother() {
